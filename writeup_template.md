@@ -113,6 +113,27 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ### Pipeline (video)
 
+
+
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Project Video
+
+<a href="https://www.youtube.com/watch?v=kMyRkVBFjZo&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/kMyRkVBFjZo/0.jpg" 
+alt="CarND-Advanced-Lane-Finding | Project Video" width="240" height="180" border="10" /></a>
+
+
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Challenge video
+
+<a href="https://www.youtube.com/watch?v=ijTnYbzQZqk&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/ijTnYbzQZqk/0.jpg" 
+alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="240" height="180" border="10" /></a>
+
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Harder Challenge video
+
+<a href="https://www.youtube.com/watch?v=pLRka9xzDr0&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/pLRka9xzDr0/0.jpg" 
+alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="180" border="10" /></a>
+
+
+
+
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
 Here's a [link to my video result](./project_video.mp4)
