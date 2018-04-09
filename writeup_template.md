@@ -113,6 +113,9 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ### Pipeline (video)
 
+#### I provided below a link to the final video output.  The pipeline performed reasonably well on the main project video. However I didn't get the expected result with the challenge video or the Harder challenge video. 
+
+Here's a [link to my video result](./project_video.mp4)
 
 
 #### CarND | Project 4 - CarND-Advanced-Lane-Finding | Project Video
@@ -134,9 +137,7 @@ alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="1
 
 
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
 
 ---
 
