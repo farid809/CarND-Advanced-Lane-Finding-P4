@@ -145,4 +145,8 @@ alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="1
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The image thresholding technique worked well with the main project video, whiched used combination of S thresholding, Sobel, Direction and Magnitude Gradient thresholding. However this technique didn't work will with other Challenge videos.
+
+The current pipeline can be further improved by using average of coefficients of the past nFrames to facilitate smoother lane detection. Also, The perspective transform can be further tuned to allow accurate curvature estimation.
+
+A further improvement can be also made by implementing a sophisticated masking to filter out the road imperfection from the challenge video. And fine tune the combine_threshold function to work with the harder challenge video.
