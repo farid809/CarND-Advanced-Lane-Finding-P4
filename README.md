@@ -211,7 +211,13 @@ Identify Image points        |   Perspective Transform
 
 
 #### Fitting Lane lines with a 2nd order Polynomial
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+
+The idea here is to identify lane lines pixel by calculating the histogram of the lower half of the image and identify the peaks. and use convolution to iterate through the image bottom-up. Using n-windows with fixed window Hight. 
+
+
+I created two functions to perform sliding window search perform_lane_sws(binary_warped) and another function with skip histogram search (lane_detect_no_sws) both present in file (4. Finding the Lane (Sliding Window Search). 
+
+
 
 ![alt text][image5]
 
@@ -236,11 +242,13 @@ Sliding Window Skip Search (Straight)            |   Sliding Window Skip Search 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I created a function measure_curvature3  `4. Finding the Lane (Sliding Window Search).ipynb` That calculate Lane curvatured as following :
+I created a function measure_curvature3  `4. Finding the Lane (Sliding Window Search).ipynb` That calculate Lane curvatured by fitting the detected lane points to 2nd order polynomial as following :
+
+
 
 
 def measure_curvature3(ploty, left_fit, right_fit, leftx, rightx):
-
+    
     y_eval = np.max(ploty)
     left_curverad = ((1 + (2*left_fit[0]*y_eval + left_fit[1])**2)**1.5) / np.absolute(2*left_fit[0])
     right_curverad = ((1 + (2*right_fit[0]*y_eval + right_fit[1])**2)**1.5) / np.absolute(2*right_fit[0])
