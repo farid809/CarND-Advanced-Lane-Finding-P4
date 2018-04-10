@@ -16,6 +16,41 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+
+
+### Files Submitted 
+
+This project includes the following files:
+I Had to split up my jupyter notebook project to the follow parts due to notebook unexpectedly crashing :
+1. Compute Camera Calibration.ipynb 
+2. Perspective Transform.ipynb
+3. Color Spaces and Gradient Thresholds.ipynb
+4. Finding the Lane (Sliding Window Search).ipynb
+
+Directories :
+1. output_images : Sample output images for the writeup
+2. output_videos : Pipeline Processed output video
+3. pickle_data_store : pickle data store to share data between notebooks.
+4. README : This writeup 
+
+
+### Sample Project Outcome
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Project Video
+
+<a href="https://www.youtube.com/watch?v=kMyRkVBFjZo&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/kMyRkVBFjZo/0.jpg" 
+alt="CarND-Advanced-Lane-Finding | Project Video" width="240" height="180" border="10" /></a>
+
+
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Challenge video
+
+<a href="https://www.youtube.com/watch?v=ijTnYbzQZqk&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/ijTnYbzQZqk/0.jpg" 
+alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="240" height="180" border="10" /></a>
+
+#### CarND | Project 4 - CarND-Advanced-Lane-Finding | Harder Challenge video
+
+<a href="https://www.youtube.com/watch?v=pLRka9xzDr0&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/pLRka9xzDr0/0.jpg" 
+
+
 [//]: # (Image References)
 
 [image1]: ./examples/undistort_output.png "Undistorted"
@@ -76,7 +111,7 @@ You're reading it!
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the first code cell of the IPython notebook located in "./1. Compute Camera Calibration.ipynb" 
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
