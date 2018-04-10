@@ -215,7 +215,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 #### Pipeline Sanity Checks (Reset)
 
-As long as the expected lane width is detected I skip sliding window search. I use both upper and lower bounder thresholds for the lane width to act as Sanity checks and make sure we didn't lose the lanes due to a difficult frame. I provided below a graph of the lane width for the entire video and highlighted both the uppoer and lower thresholds i used. whenever the width exceed the upper threshold or go below the lower thresholds a sliding window search will be initiated. 
+As long as the expected lane width is detected I skip sliding window search. I use both upper and lower boundry thresholds for the lane width to act as Sanity checks and make sure we didn't lose the lanes due to a difficult frame. I provided below a graph of the lane width for the entire video and highlighted both the uppoer and lower thresholds i used. whenever the width exceed the upper threshold or go below the lower thresholds a sliding window search will be initiated. 
 
 Lane Width Overtime against Sliding Window Thresholds            | 
 :-------------------------:|
