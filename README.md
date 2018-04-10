@@ -27,6 +27,15 @@ The goals / steps of this project are the following:
 [video1]: ./project_video.mp4 "Video"
 
 
+[combined_threshold-original-0]: ./output_images/combined_threshold-original-0.jpg	
+[combined_threshold-original-1]: ./output_images/combined_threshold-original-1.jpg	
+[combined_threshold-perspective-original-0]: ./output_images/combined_threshold-perspective-original-0.jpg	
+[combined_threshold-perspective-original-1]: ./output_images/combined_threshold-perspective-original-1.jpg	
+[combined_threshold-perspective-processed-0]: ./output_images/combined_threshold-perspective-processed-0.jpg	
+[combined_threshold-perspective-processed-1]: ./output_images/combined_threshold-perspective-processed-1.jpg	
+[combined_threshold-processed-0]: ./output_images/combined_threshold-processed-0.jpg	
+[combined_threshold-processed-1]: ./output_images/combined_threshold-processed-1.jpg
+
 
 [Perspective_Transform_img_points]: ./output_images/Perspective_Transform_img_points.jpg
 [Perspective_Transform_unwarped]: ./output_images/Perspective_Transform_unwarped.jpg
@@ -81,7 +90,28 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![alt text][image3]
+
+
+
+Combined Thresholds (Original)          |   Combined Thresholds (Processed)
+:-------------------------:|:-------------------------:
+![alt text][combined_threshold-original-0] | ![alt text][combined_threshold-processed-0]
+
+
+Combined Thresholds (Original)          |   Combined Thresholds (Processed)
+:-------------------------:|:-------------------------:
+![alt text][combined_threshold-original-1] | ![alt text][combined_threshold-processed-1]
+
+
+
+Combined Thresholds Perspective (Original)          |   Combined Thresholds Perspective (Processed)
+:-------------------------:|:-------------------------:
+![alt text][combined_threshold-perspective-original-0] | ![alt text][combined_threshold-perspective-processed-0]
+
+
+Combined Thresholds Perspective (Original)          |   Combined Thresholds Perspective (Processed)
+:-------------------------:|:-------------------------:
+![alt text][combined_threshold-perspective-original-1] | ![alt text][combined_threshold-perspective-processed-1]
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
