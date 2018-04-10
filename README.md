@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [video1]: ./project_video.mp4 "Video"
 
 
-
+[calibration-image9]: ./output_images/calibration-image9.jpg
 
 [undistor-corrected]: ./output_images/undistor-corrected.jpg	
 [undistor-corrected_board]: ./output_images/undistor-corrected_board.jpg	
@@ -82,30 +82,25 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![alt text][image1]
+
+Image Calibration            | 
+:-------------------------:|
+![alt text][calibration-image9]  |
 
 
-
-[Perspective_Transform_img_points]: ./output_images/Perspective_Transform_img_points.jpg
-[Perspective_Transform_unwarped]: ./output_images/Perspective_Transform_unwarped.jpg
+ (Original)          |    (Undistored)
+:-------------------------:|:-------------------------:
+![alt text][undistor-original_board]| ![alt text][undistor-corrected_board]
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
 
 
-[undistor-corrected]: ./output_images/undistor-corrected.jpg	
-[undistor-corrected_board]: ./output_images/undistor-corrected_board.jpg	
-[undistor-corrected_sample_image]: ./output_images/undistor-corrected_sample_image.jpg
-[undistor-original]: ./output_images/undistor-original.jpg	
-[undistor-original_board]: ./output_images/undistor-original_board.jpg	
-[undistor-original_sample_image]: ./output_images/undistor-original_sample_image.jpg
 
-
-Combined Thresholds (Original)          |   Combined Thresholds (Processed)
+ (Original)          |    (Undistored)
 :-------------------------:|:-------------------------:
 ![alt text][undistor-original_sample_image] | ![alt text][undistor-corrected_sample_image]
 
