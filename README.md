@@ -242,6 +242,9 @@ I created two functions to perform sliding window search perform_lane_sws(binary
 
 [References] Code modified from Carnd-Term1 class
 
+
+```python
+
     # Concatenate the arrays of indices
     left_lane_inds = np.concatenate(left_lane_inds)
     right_lane_inds = np.concatenate(right_lane_inds)
@@ -262,7 +265,7 @@ I created two functions to perform sliding window search perform_lane_sws(binary
     left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
     right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
 
-
+```
 
 
 
@@ -292,6 +295,7 @@ Sliding Window Skip Search (Straight)            |   Sliding Window Skip Search 
 I created a function measure_curvature3  `4. Finding the Lane (Sliding Window Search).ipynb` That calculate Lane curvatured by fitting the detected lane points to 2nd order polynomial as following :
 
 
+```python
 
 
 def measure_curvature3(ploty, left_fit, right_fit, leftx, rightx):
@@ -307,6 +311,7 @@ def measure_curvature3(ploty, left_fit, right_fit, leftx, rightx):
        
     return left_curverad, right_curverad
 
+```
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
