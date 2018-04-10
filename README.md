@@ -251,9 +251,7 @@ Also the video can be downloaded from here a [link to my video result](./project
 
 
 
-Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
+
 
 ---
 
