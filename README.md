@@ -122,7 +122,7 @@ Then I did some other stuff and fit my lane lines with a 2nd order polynomial ki
 
 Sliding Window Search (Straight)            |   Sliding Window Search (Curved)
 :-------------------------:|:-------------------------:
-![alt text][Sliding-Window-Search-original-1] | ![alt text][Sliding-Window-Search-processed-1]
+![alt text][Sliding-Window-Search-original-0] | ![alt text][Sliding-Window-Search-processed-1]
 
 
 
@@ -130,7 +130,7 @@ Sliding Window Search (Straight)            |   Sliding Window Search (Curved)
 
 Sliding Window Skip Search (Straight)            |   Sliding Window Skip Search (Curved)
 :-------------------------:|:-------------------------:
-![alt text][Sliding-Window-Skip-Search-original-1]  | ![alt text][Sliding-Window-Skip-Search-processed-1]
+![alt text][Sliding-Window-Skip-Search-original-0]  | ![alt text][Sliding-Window-Skip-Search-processed-1]
 
 
 
