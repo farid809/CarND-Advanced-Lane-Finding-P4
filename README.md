@@ -170,19 +170,42 @@ Combined Thresholds Perspective (Original)          |   Combined Thresholds Pers
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `image_unwarp()`, which appears in  the file `2. Perspective Transform.ipynb` (output_images/Perspective_Transform_unwarped.jpg).  The `image_unwarp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
 ```python
-src = np.float32(
-    [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
-    [((img_size[0] / 6) - 10), img_size[1]],
-    [(img_size[0] * 5 / 6) + 60, img_size[1]],
-    [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
-dst = np.float32(
-    [[(img_size[0] / 4), 0],
-    [(img_size[0] / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), img_size[1]],
-    [(img_size[0] * 3 / 4), 0]])
+
+src = np.float32([
+                  (595 ,450 ),
+                  (686 ,450), 
+                   (250,682),
+                  (1042,682)])
+dst = np.float32([(250,0),
+                  (w-250,0),
+                  (250,682),
+                  (w-250,682)])
+                  
+                  
+def image_unwarp(img, src, dst):
+    
+    undist, mtx, dist = cal_undistort(img, objpoints, imgpoints)
+        
+    # Convert undistorted image to grayscale
+    gray = cv2.cvtColor(undist, cv2.COLOR_BGR2GRAY)
+        
+    img_size = (gray.shape[1], gray.shape[0]) 
+        
+    # Given src and dst points, calculate the perspective transform matrix
+    M = cv2.getPerspectiveTransform(src, dst)
+    
+    
+    #Inverse Perspective Transform 
+    Minv = cv2.getPerspectiveTransform(dst, src)
+    
+    # Warp the image using OpenCV warpPerspective()
+    warped = cv2.warpPerspective(undist, M, img_size)
+    
+    return warped, M, Minv
+
 ```
 
 This resulted in the following source and destination points:
@@ -215,7 +238,31 @@ Identify Image points        |   Perspective Transform
 The idea here is to identify lane lines pixel by calculating the histogram of the lower half of the image and identify the peaks. and use convolution to iterate through the image bottom-up. Using n-windows with fixed window Hight. 
 
 
-I created two functions to perform sliding window search perform_lane_sws(binary_warped) and another function with skip histogram search (lane_detect_no_sws) both present in file (4. Finding the Lane (Sliding Window Search). 
+I created two functions to perform sliding window search perform_lane_sws(binary_warped) and another function with skip histogram search (lane_detect_no_sws) both present in file (4. Finding the Lane (Sliding Window Search). Also, I provided below sample output images from both functions demonestrating sliding window detection for straight and curved lanes.
+
+[References] Code modified from Carnd-Term1 class
+
+    # Concatenate the arrays of indices
+    left_lane_inds = np.concatenate(left_lane_inds)
+    right_lane_inds = np.concatenate(right_lane_inds)
+
+    # Extract left and right line pixel positions
+    leftx = nonzerox[left_lane_inds]
+    lefty = nonzeroy[left_lane_inds] 
+    rightx = nonzerox[right_lane_inds]
+    righty = nonzeroy[right_lane_inds] 
+
+    # Fit a second order polynomial to each
+    left_fit = np.polyfit(lefty, leftx, 2)
+    right_fit = np.polyfit(righty, rightx, 2)
+    
+    # Generate x and y values for plotting
+    ploty = np.linspace(0, binary_warped.shape[0]-1, binary_warped.shape[0] )
+    
+    left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+    right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+
+
 
 
 
