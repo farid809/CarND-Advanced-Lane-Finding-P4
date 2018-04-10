@@ -137,14 +137,13 @@ alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="2
 alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="180" border="10" /></a>
 
 
-Solarized dark             |  Solarized Ocean
+Lane Width Overtime against Sliding Window Thresholds            | 
+:-------------------------:|:-------------------------:
+![alt text][Sliding_Window_Lane_Width_over_Time]  |
+
+Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
-
-
-+| ![alt text][Sliding_Window_Lane_Width_over_Time] |
-+| :---: | 
-+|  Lane Width Overtime against Sliding Window Thresholds |
 
 ---
 
