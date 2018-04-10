@@ -26,6 +26,18 @@ The goals / steps of this project are the following:
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
+
+
+
+
+[Sliding-Window-Search-original-1]: ./output_images/Sliding-Window-Search-original-1.jpg
+[Sliding-Window-Search-processed-1]: ./output_images/Sliding-Window-Search-processed-1.jpg
+
+
+[Sliding-Window-Skip-Search-original-1]: ./output_images/Sliding-Window-Skip-Search-original-1.jpg
+[Sliding-Window-Skip-Search-processed-1]: ./output_images/Sliding-Window-Skip-Search-processed-1.jpg
+
+[Highlighted_Lane_From_Video]: ./output_images/Highlight_lane_From_video.jpg.png
 [Sliding_Window_Lane_Width_over_Time]: ./output_images/Sliding_Window_Lane_Width_over_Time.jpg "Lane Width Tracking against sliding window Thresholds"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -97,9 +109,30 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
+
+
+#### Fitting Lane lines with a 2nd order Polynomial
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image5]
+
+
+#### Performing Sliding Window Search
+
+Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
+
+
+
+#### Skipping Sliding Window Search
+
+Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
+
+
+
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -109,24 +142,28 @@ I did this in lines # through # in my code in `my_other_file.py`
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
-![alt text][image6]
+![alt text][Highlighted_Lane_From_Video]
 
 ---
 
 ### Pipeline (video)
 
 
-#### Pipeline Sanity Checks
+#### Pipeline Sanity Checks (Reset)
+
+As long as the expected lane width is detected I skip sliding window search. I use both upper and lower bounder thresholds for the lane width to act as Sanity checks and make sure we didn't lose the lanes due to a difficult frame. I provided below a graph of the lane width for the entire video and highlighted both the uppoer and lower thresholds i used. whenever the width exceed the upper threshold or go below the lower thresholds a sliding window search will be initiated. 
+
 Lane Width Overtime against Sliding Window Thresholds            | 
 :-------------------------:|
 ![alt text][Sliding_Window_Lane_Width_over_Time]  |
 
-
+% frames Processed using  Sliding window Search= 26.09 %
+% frames Skipped Sliding window Search= 73.91 %
 
 #### I provided below a link to the final video output.  The pipeline performed reasonably well on the main project video. However I didn't get the expected result with the challenge video or the Harder challenge video. 
 
-Here's a [link to my video result](./project_video.mp4)
 
+Here's a youtube link to my video result
 
 #### CarND | Project 4 - CarND-Advanced-Lane-Finding | Project Video
 
@@ -145,6 +182,7 @@ alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="2
 alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="180" border="10" /></a>
 
 
+Also the video can be downloaded from here a [link to my video result](./project_video.mp4)
 
 
 
