@@ -236,7 +236,21 @@ Sliding Window Skip Search (Straight)            |   Sliding Window Skip Search 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+I created a function measure_curvature3  `4. Finding the Lane (Sliding Window Search).ipynb` That calculate Lane curvatured as following :
+
+
+def measure_curvature3(ploty, left_fit, right_fit, leftx, rightx):
+
+    y_eval = np.max(ploty)
+    left_curverad = ((1 + (2*left_fit[0]*y_eval + left_fit[1])**2)**1.5) / np.absolute(2*left_fit[0])
+    right_curverad = ((1 + (2*right_fit[0]*y_eval + right_fit[1])**2)**1.5) / np.absolute(2*right_fit[0])
+    
+    # Define conversions in x and y from pixels space to meters
+    ym_per_pix = 30/720 # meters per pixel in y dimension
+    xm_per_pix = 3.7/700 # meters per pixel in x dimension
+    
+       
+    return left_curverad, right_curverad
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
@@ -300,3 +314,11 @@ The image thresholding technique worked well with the main project video, whiche
 The current pipeline can be further improved by using average of coefficients of the past nFrames to facilitate smoother lane detection. Also, The perspective transform can be further tuned to allow accurate curvature estimation.
 
 A further improvement can be also made by implementing a sophisticated masking to filter out the road imperfection from the challenge video. And fine tune the combine_threshold function to work with the harder challenge video.
+
+
+
+## [References]
+
+1. https://discussions.udacity.com/t/error-when-test-with-challenge-video/505092/2
+2. https://discussions.udacity.com/t/curvature-value-seems-small-and-choppy/643472
+3. Udacity CarND Term1 :  Advance Lane Finding
