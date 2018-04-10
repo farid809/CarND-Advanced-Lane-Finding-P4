@@ -138,7 +138,7 @@ alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="1
 
 
 Lane Width Overtime against Sliding Window Thresholds            | 
-:-------------------------:|:-------------------------:
+:-------------------------:|
 ![alt text][Sliding_Window_Lane_Width_over_Time]  |
 
 Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
