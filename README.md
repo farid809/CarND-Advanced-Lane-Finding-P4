@@ -115,6 +115,14 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ### Pipeline (video)
 
+
+#### Pipeline Sanity Checks
+Lane Width Overtime against Sliding Window Thresholds            | 
+:-------------------------:|
+![alt text][Sliding_Window_Lane_Width_over_Time]  |
+
+
+
 #### I provided below a link to the final video output.  The pipeline performed reasonably well on the main project video. However I didn't get the expected result with the challenge video or the Harder challenge video. 
 
 Here's a [link to my video result](./project_video.mp4)
@@ -137,9 +145,9 @@ alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="2
 alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="180" border="10" /></a>
 
 
-Lane Width Overtime against Sliding Window Thresholds            | 
-:-------------------------:|
-![alt text][Sliding_Window_Lane_Width_over_Time]  |
+
+
+
 
 Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
 :-------------------------:|:-------------------------:
