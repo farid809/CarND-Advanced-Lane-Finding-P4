@@ -28,7 +28,8 @@ The goals / steps of this project are the following:
 
 
 
-
+[Perspective_Transform_img_points]: ./output_images/Perspective_Transform_img_points.jpg
+[Perspective_Transform_unwarped]: ./output_images/Perspective_Transform_unwarped.jpg
 
 [Sliding-Window-Search-original-0]: ./output_images/Sliding-Window-Search-original-0.jpg
 [Sliding-Window-Search-processed-1]: ./output_images/Sliding-Window-Search-processed-1.jpg
@@ -63,6 +64,11 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
 ![alt text][image1]
+
+
+
+[Perspective_Transform_img_points]: ./output_images/Perspective_Transform_img_points.jpg
+[Perspective_Transform_unwarped]: ./output_images/Perspective_Transform_unwarped.jpg
 
 ### Pipeline (single images)
 
@@ -105,7 +111,15 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+Identify Image points        |   Perspective Transform
+:-------------------------:|:-------------------------:
+![alt text][Perspective_Transform_img_points] | ![alt text][Perspective_Transform_unwarped]
+
+
+
+[Perspective_Transform_img_points]: ./output_images/Perspective_Transform_img_points.jpg
+[Perspective_Transform_unwarped]: ./output_images/Perspective_Transform_unwarped.jpg
+
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
