@@ -140,7 +140,10 @@ alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="1
 
 
 
-![alt text][Sliding_Window_Lane_Width_over_Time]
++| ![alt text][Sliding_Window_Lane_Width_over_Time] |
++| :---: | 
++|  Lane Width Overtime against Sliding Window Thresholds |
+
 ---
 
 ### Discussion
