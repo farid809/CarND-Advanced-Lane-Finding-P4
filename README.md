@@ -30,11 +30,11 @@ The goals / steps of this project are the following:
 
 
 
-[Sliding-Window-Search-original-1]: ./output_images/Sliding-Window-Search-original-1.jpg
+[Sliding-Window-Search-original-0]: ./output_images/Sliding-Window-Search-original-0.jpg
 [Sliding-Window-Search-processed-1]: ./output_images/Sliding-Window-Search-processed-1.jpg
 
 
-[Sliding-Window-Skip-Search-original-1]: ./output_images/Sliding-Window-Skip-Search-original-1.jpg
+[Sliding-Window-Skip-Search-original-0]: ./output_images/Sliding-Window-Skip-Search-original-0.jpg
 [Sliding-Window-Skip-Search-processed-1]: ./output_images/Sliding-Window-Skip-Search-processed-1.jpg
 
 [Highlighted_Lane_From_Video]: ./output_images/Highlight_lane_From_video.jpg.png
@@ -117,19 +117,20 @@ Then I did some other stuff and fit my lane lines with a 2nd order polynomial ki
 ![alt text][image5]
 
 
+
 #### Performing Sliding Window Search
 
-Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
+Sliding Window Search (Straight)            |   Sliding Window Search (Curved)
 :-------------------------:|:-------------------------:
-![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
+![alt text][Sliding-Window-Search-original-1] | ![alt text][Sliding-Window-Search-processed-1]
 
 
 
 #### Skipping Sliding Window Search
 
-Lane Width Overtime against Sliding Window Thresholds            |  Solarized Ocean
+Sliding Window Skip Search (Straight)            |   Sliding Window Skip Search (Curved)
 :-------------------------:|:-------------------------:
-![alt text][Sliding_Window_Lane_Width_over_Time]  | ![alt text][Sliding_Window_Lane_Width_over_Time]
+![alt text][Sliding-Window-Skip-Search-original-1]  | ![alt text][Sliding-Window-Skip-Search-processed-1]
 
 
 
