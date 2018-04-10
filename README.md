@@ -27,6 +27,16 @@ The goals / steps of this project are the following:
 [video1]: ./project_video.mp4 "Video"
 
 
+
+
+[undistor-corrected]: ./output_images/undistor-corrected.jpg	
+[undistor-corrected_board]: ./output_images/undistor-corrected_board.jpg	
+[undistor-corrected_sample_image]: ./output_images/undistor-corrected_sample_image.jpg
+[undistor-original]: ./output_images/undistor-original.jpg	
+[undistor-original_board]: ./output_images/undistor-original_board.jpg	
+[undistor-original_sample_image]: ./output_images/undistor-original_sample_image.jpg
+
+
 [combined_threshold-original-0]: ./output_images/combined_threshold-original-0.jpg	
 [combined_threshold-original-1]: ./output_images/combined_threshold-original-1.jpg	
 [combined_threshold-perspective-original-0]: ./output_images/combined_threshold-perspective-original-0.jpg	
@@ -86,9 +96,23 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 ![alt text][image2]
 
+
+[undistor-corrected]: ./output_images/undistor-corrected.jpg	
+[undistor-corrected_board]: ./output_images/undistor-corrected_board.jpg	
+[undistor-corrected_sample_image]: ./output_images/undistor-corrected_sample_image.jpg
+[undistor-original]: ./output_images/undistor-original.jpg	
+[undistor-original_board]: ./output_images/undistor-original_board.jpg	
+[undistor-original_sample_image]: ./output_images/undistor-original_sample_image.jpg
+
+
+Combined Thresholds (Original)          |   Combined Thresholds (Processed)
+:-------------------------:|:-------------------------:
+![alt text][undistor-original_sample_image] | ![alt text][undistor-corrected_sample_image]
+
+
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image (thresholding steps  in `3. Color Spaces and Gradient Thresholds.ipynb`).  Here's an example of my output for this step. I used combination of S thresholding, Sobel, Direction and Magnitude Gradient thresholding. 
 
 
 
