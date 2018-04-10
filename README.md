@@ -26,6 +26,8 @@ The goals / steps of this project are the following:
 [image6]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
+[Sliding_Window_Lane_Width_over_Time]: ./output_images/Sliding_Window_Lane_Width_over_Time.jpg "Lane Width Tracking against sliding window Thresholds"
+
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -138,7 +140,7 @@ alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="1
 
 
 
-
+![alt text][Sliding_Window_Lane_Width_over_Time]
 ---
 
 ### Discussion
