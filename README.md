@@ -49,6 +49,7 @@ alt="CarND | Project 4 - CarND-Advanced-Lane-Finding | challenge video" width="2
 #### CarND | Project 4 - CarND-Advanced-Lane-Finding | Harder Challenge video
 
 <a href="https://www.youtube.com/watch?v=pLRka9xzDr0&feature=youtu.be" target="_blank"><img src="http://img.youtube.com/vi/pLRka9xzDr0/0.jpg" 
+alt="CarND-Advanced-Lane-Finding | Harder Challenge video" width="240" height="180" border="10" /></a>
 
 
 [//]: # (Image References)
